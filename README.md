@@ -1,8 +1,11 @@
-# AlgoVerse — NSBM DSA Lecture Edition
+# AlgoVerse — Algorithms and Data Structures Visualizer
 
-A futuristic, responsive, dual-theme, dependency-free **Data Structures & Algorithms learning lab** built with HTML, CSS and vanilla JavaScript. The project adapts the supplied NSBM lecture topics into interactive demonstrations; it is an independent student project, **not an official NSBM application**.
+A futuristic, responsive, dual-theme, dependency-free **Data Structures & Algorithms learning lab** built with HTML, CSS and vanilla JavaScript. The project adapts the university module, Algorithms and Data Structures into interactive demonstrations; it is an independent student project, **an independent student project**.
 
 ## Features
+
+- **Subtle 3D hover tilt:** pointer-tracked movement on topic, information and statistic cards (max ±3°), with smooth reset; no blinking. Respects reduced-motion settings and touch devices.
+
 
 - Fresh botanical teal, mint and amber palette with **dark and light modes** (saved locally).
 - Topic cards without lecture numbers for a cleaner portfolio presentation.
@@ -90,8 +93,12 @@ git push -u origin main
 
 ## Credits
 
-Lecture topic alignment: user-provided NSBM Green University Data Structures & Algorithms lecture materials (L1–L8). No slide images or lecture content files are redistributed in this repository.
+Lecture topic alignment: user-provided university Green University Data Structures & Algorithms lecture materials (L1–L8). No slide images or lecture content files are redistributed in this repository.
 
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+## Updating an existing GitHub Pages repository
+
+Upload or replace `index.html`, `style.css`, `tilt.js`, and the other project files in the repository root. Remove any obsolete hover-effect scripts if present. Commit changes, then wait for GitHub Pages to redeploy. A hard refresh (Ctrl+Shift+R) may be needed to clear cached CSS.
