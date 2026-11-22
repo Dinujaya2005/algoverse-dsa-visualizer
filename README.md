@@ -1,6 +1,6 @@
-# AlgoVerse —  ADS Lecture Edition
+# AlgoVerse — NSBM DSA Lecture Edition
 
-A futuristic, responsive, dual-theme, dependency-free **Algorithms and Data Structures** built with HTML, CSS and vanilla JavaScript. The project adapts the supplied NSBM lecture topics into interactive demonstrations; it is an independent student project, **not an official NSBM application**.
+A futuristic, responsive, dual-theme, dependency-free **Data Structures & Algorithms learning lab** built with HTML, CSS and vanilla JavaScript. The project adapts the supplied NSBM lecture topics into interactive demonstrations; it is an independent student project, **not an official NSBM application**.
 
 ## Features
 
@@ -18,7 +18,22 @@ A futuristic, responsive, dual-theme, dependency-free **Algorithms and Data Stru
 - **Complexity:** Relative growth curves O(1), O(log n), O(n), O(n log n), O(n²)
 - Sorting/searching speed, array-size, pause/resume, operation counts, time complexity and status
 
+## Lecture alignment
 
+| Supplied lecture | Topics represented |
+|---|---|
+| L1 Introduction to Data Structures & Algorithms | Algorithms and efficiency in the course roadmap |
+| L2 Searching Algorithms | Linear and Binary Search |
+| L3.1 Stacks | LIFO, push, pop, peek |
+| L3.2 Queues | FIFO, enqueue, dequeue |
+| L3.2 Circular Queue | Wraparound indices and fixed-capacity array |
+| L4 Sorting Algorithms | Bubble and Selection Sort |
+| L5 Sorting Algorithms-II | Insertion and Merge Sort |
+| L6 Trees; L6.1 DFS | Binary tree and preorder/inorder/postorder |
+| L7 Iteration and Recursion | Recursive factorial and base case |
+| L7 Algorithmic Analysis; L8 Complexity | Big O growth and comparison |
+
+**Scope note:** This is a learning visualization, not a verbatim reproduction of lecture slides. Quick Sort is an optional extra. Tree demonstrations use a fixed sample tree. The factorial module illustrates recursion rather than an animated call stack. The Big O chart uses theoretical relative growth, **not** measured CPU time. The original sorting/searching elapsed-time counter tracks animation time, not an algorithm benchmark.
 
 ## Run locally (VS Code)
 
