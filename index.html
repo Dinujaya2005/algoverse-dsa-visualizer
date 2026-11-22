@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101816" />
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("algoverse-theme")==="light"?"light":"dark"}catch(e){document.documentElement.dataset.theme="dark"}</script>
+  <meta name="description" content="An interactive futuristic algorithm visualizer for sorting and searching." />
+  <title>AlgoVerse | Algorithm Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <script src="modules.js" defer></script>
+  <script src="theme.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="AlgoVerse home"><span class="brand-icon">⌘</span><span>Algo<span class="accent">Verse</span></span></a>
+    <nav><a href="#visualizer">Visualizer</a><a href="#modules">DSA Lab</a><a href="#guide">Guide</a><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" aria-pressed="false"><span id="themeIcon">☀</span><span id="themeLabel">Light mode</span></button>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> INTERACTIVE COMPUTER SCIENCE LAB</div>
+      <h1>See algorithms <span class="gradient-text">come alive.</span></h1>
+      <p>A lecture-aligned interactive lab for sorting, searching, stacks, queues, trees, recursion, and complexity.</p>
+      <a class="hero-button" href="#visualizer">Launch Visualizer <span>↘</span></a>
+    </section>
+    <section id="visualizer" class="workspace" aria-label="Algorithm visualizer">
+      <div class="section-heading"><div><span class="overline">01 / THE LAB</span><h2>Visualization Studio</h2></div><span class="live-indicator"><span class="pulse"></span> LIVE SIMULATION</span></div>
+      <div class="panel controls">
+        <div class="control"><label for="algorithm">Algorithm</label><select id="algorithm"><optgroup label="Sorting"><option value="bubble">Bubble Sort</option><option value="selection">Selection Sort</option><option value="insertion">Insertion Sort</option><option value="merge">Merge Sort</option><option value="quick">Quick Sort (extra)</option></optgroup><optgroup label="Searching"><option value="linear">Linear Search</option><option value="binary">Binary Search</option></optgroup></select></div>
+        <div class="control slider-control"><label for="size">Array size <output id="sizeValue">30</output></label><input id="size" type="range" min="8" max="70" value="30" /></div>
+        <div class="control slider-control"><label for="speed">Animation speed <output id="speedValue">60%</output></label><input id="speed" type="range" min="1" max="100" value="60" /></div>
+        <div class="control target-control" id="targetGroup" hidden><label for="target">Search target</label><input id="target" type="number" min="5" max="99" value="42" /></div>
+        <div class="control action-group"><label>Actions</label><div class="actions"><button id="shuffle" class="btn secondary" type="button">↻ New Array</button><button id="start" class="btn primary" type="button">▶ Start</button><button id="pause" class="btn secondary" type="button" disabled>Ⅱ Pause</button></div></div>
+      </div>
+      <div class="panel canvas-panel"><div class="canvas-header"><div><span class="visual-label">ARRAY VISUALIZATION</span><span id="status" class="status" role="status" aria-live="polite">Ready to visualize</span></div><span class="array-label" id="arrayLabel">30 ELEMENTS</span></div><div class="bars" id="bars" role="img" aria-label="Array bars showing algorithm progress"></div><div class="legend"><span><i class="legend-dot normal"></i>Unsorted</span><span><i class="legend-dot compare"></i>Comparing</span><span><i class="legend-dot swap"></i>Swapping / writing</span><span><i class="legend-dot sorted"></i>Sorted / found</span></div></div>
+      <div class="stats"><div class="stat panel"><span>COMPARISONS</span><strong id="comparisons">0</strong></div><div class="stat panel"><span>SWAPS / WRITES</span><strong id="swaps">0</strong></div><div class="stat panel"><span>ELAPSED TIME</span><strong id="elapsed">0.00s</strong></div><div class="stat panel"><span>TIME COMPLEXITY</span><strong id="complexity">O(n²)</strong></div></div>
+    </section>
+
+<section id="modules" class="guide module-section">
+ <div class="section-heading"><div><span class="overline">02 / INTERACTIVE DSA LAB</span><h2>Data Structures Studio</h2></div></div>
+ <p class="module-intro">Experiment with operations from the NSBM Data Structures & Algorithms lecture sequence. Select a module to reveal its interactive controls.</p>
+ <div class="module-tabs" role="group" aria-label="DSA modules"><button class="module-tab active" data-module="stack">Stack</button><button class="module-tab" data-module="queue">Queue</button><button class="module-tab" data-module="circular">Circular Queue</button><button class="module-tab" data-module="tree">Tree Traversal</button><button class="module-tab" data-module="recursion">Recursion</button><button class="module-tab" data-module="complexity">Big O</button></div>
+ <div class="panel module-panel">
+  <div class="module-header"><div><span class="overline" id="moduleLecture">L3.1 · STACKS</span><h3 id="moduleTitle">Stack · LIFO</h3><p id="moduleExplain">Last in, first out: add and remove from the top.</p></div><span class="module-pill" id="moduleBadge">O(1) push / pop</span></div>
+  <div class="module-controls" id="moduleControls"><label for="moduleValue">Value <input id="moduleValue" type="number" value="42" min="-999" max="999"/></label><button class="btn primary" id="moduleAdd">Push</button><button class="btn secondary" id="moduleRemove">Pop</button><button class="btn secondary" id="modulePeek">Peek</button><button class="btn secondary" id="moduleReset">Reset</button></div>
+  <div class="module-display" id="moduleDisplay" aria-live="polite"></div><p class="module-status" id="moduleStatus" role="status">Ready. Try pushing a value.</p>
+ </div>
+</section>
+<section class="guide lecture-section" id="lecture-map"><div class="section-heading"><div><span class="overline">03 / TOPIC ROADMAP</span><h2>Explore by topic</h2></div></div>
+<div class="lecture-grid">
+<article class="panel lecture-card"><b>Introduction</b><p>Algorithms, data structures, time and space efficiency.</p></article>
+<article class="panel lecture-card"><b>Searching</b><p>Linear and binary search. Binary search requires sorted input.</p><a href="#visualizer" data-pick="binary">Try binary search ↗</a></article>
+<article class="panel lecture-card"><b>Stacks</b><p>LIFO, push, pop, peek, empty/full.</p><a href="#modules" data-open="stack">Try stack ↗</a></article>
+<article class="panel lecture-card"><b>Queues</b><p>FIFO, enqueue, dequeue and circular wraparound.</p><a href="#modules" data-open="circular">Try circular queue ↗</a></article>
+<article class="panel lecture-card"><b>Sorting</b><p>Bubble sort and selection sort.</p><a href="#visualizer" data-pick="bubble">Try bubble sort ↗</a></article>
+<article class="panel lecture-card"><b>Advanced Sorting</b><p>Insertion sort and divide-and-conquer merge sort.</p><a href="#visualizer" data-pick="merge">Try merge sort ↗</a></article>
+<article class="panel lecture-card"><b>Trees & DFS</b><p>Root, parent, child, leaf; preorder, inorder and postorder.</p><a href="#modules" data-open="tree">Try traversal ↗</a></article>
+<article class="panel lecture-card"><b>Iteration & Recursion</b><p>Repeated loops, recursive calls and base cases.</p><a href="#modules" data-open="recursion">Try factorial ↗</a></article>
+<article class="panel lecture-card"><b>Analysis & Complexity</b><p>Best, average and worst cases; Big O growth.</p><a href="#modules" data-open="complexity">Compare growth ↗</a></article>
+</div><p class="source-note">Inspired by the supplied Data Structures & Algorithms course topics. Quick Sort is included as an additional exploration topic, beyond the four core sorting algorithms covered in the course.</p></section>
+    <section id="guide" class="guide"><div class="section-heading"><div><span class="overline">04 / LEARN</span><h2>Understand the process</h2></div></div><div class="guide-grid"><article class="panel info-card"><span class="info-icon">◎</span><h3 id="algoTitle">Bubble Sort</h3><p id="algoDescription">Repeatedly compares adjacent elements and swaps them when they are in the wrong order.</p></article><article class="panel info-card"><span class="info-icon">⌁</span><h3>Learn by experimenting</h3><p>Change array size and animation speed, switch algorithms, and observe their behavior and operation counts.</p></article><article class="panel info-card"><span class="info-icon">◇</span><h3>Search mode</h3><p>Try linear or binary search. Enter a target value and watch how each method locates it.</p></article></div></section>
+  </main>
+  <footer><span>© <span id="year"></span> AlgoVerse. Built with curiosity &amp; code.</span><span>Made for learning algorithms ✦</span></footer>
+</body>
+</html>
