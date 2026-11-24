@@ -12,6 +12,7 @@
   <script src="modules.js" defer></script>
   <script src="theme.js" defer></script>
   <script src="tilt.js" defer></script>
+  <script src="guide.js" defer></script>
 </head>
 <body>
   <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
@@ -61,8 +62,9 @@
 <article class="panel lecture-card"><b>Iteration & Recursion</b><p>Repeated loops, recursive calls and base cases.</p><a href="#modules" data-open="recursion">Try factorial ↗</a></article>
 <article class="panel lecture-card"><b>Analysis & Complexity</b><p>Best, average and worst cases; Big O growth.</p><a href="#modules" data-open="complexity">Compare growth ↗</a></article>
 </div><p class="source-note">Inspired by the supplied Data Structures & Algorithms course topics. Quick Sort is included as an additional exploration topic, beyond the four core sorting algorithms covered in the course.</p></section>
-    <section id="guide" class="guide"><div class="section-heading"><div><span class="overline">04 / LEARN</span><h2>Understand the process</h2></div></div><div class="guide-grid"><article class="panel info-card"><span class="info-icon">◎</span><h3 id="algoTitle">Bubble Sort</h3><p id="algoDescription">Repeatedly compares adjacent elements and swaps them when they are in the wrong order.</p></article><article class="panel info-card"><span class="info-icon">⌁</span><h3>Learn by experimenting</h3><p>Change array size and animation speed, switch algorithms, and observe their behavior and operation counts.</p></article><article class="panel info-card"><span class="info-icon">◇</span><h3>Search mode</h3><p>Try linear or binary search. Enter a target value and watch how each method locates it.</p></article></div></section>
+    <section id="guide" class="guide"><div class="section-heading"><div><span class="overline">04 / LEARN</span><h2>Understand the process</h2></div></div><div class="guide-grid"><article class="panel info-card"><span class="info-icon">◎</span><h3 id="algoTitle">Bubble Sort</h3><p id="algoDescription">Repeatedly compares adjacent elements and swaps them when they are in the wrong order.</p><button type="button" class="guide-more" data-guide="algorithm">Explore details <span aria-hidden="true">↗</span></button></article><article class="panel info-card"><span class="info-icon">⌁</span><h3>Learn by experimenting</h3><p>Change array size and animation speed, switch algorithms, and observe their behavior and operation counts.</p><button type="button" class="guide-more" data-guide="experiment">Explore details <span aria-hidden="true">↗</span></button></article><article class="panel info-card"><span class="info-icon">◇</span><h3>Search mode</h3><p>Try linear or binary search. Enter a target value and watch how each method locates it.</p><button type="button" class="guide-more" data-guide="search">Explore details <span aria-hidden="true">↗</span></button></article></div></section>
   </main>
   <footer><span>© <span id="year"></span> AlgoVerse. Built with curiosity &amp; code.</span><span>Made for learning algorithms ✦</span></footer>
+<dialog id="guideDialog" class="guide-dialog" aria-labelledby="guideDialogTitle"><div class="guide-dialog-head"><span class="overline">ALGOVERSE / LEARN</span><button type="button" id="guideClose" aria-label="Close details" autofocus>✕</button></div><h2 id="guideDialogTitle"></h2><div id="guideDialogBody"></div><a class="guide-more" href="#visualizer" id="guideTry">Open visualizer ↗</a></dialog>
 </body>
 </html>

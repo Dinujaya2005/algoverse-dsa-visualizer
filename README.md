@@ -102,3 +102,6 @@ MIT — see [LICENSE](LICENSE).
 ## Updating an existing GitHub Pages repository
 
 Upload or replace `index.html`, `style.css`, `tilt.js`, and the other project files in the repository root. Remove any obsolete hover-effect scripts if present. Commit changes, then wait for GitHub Pages to redeploy. A hard refresh (Ctrl+Shift+R) may be needed to clear cached CSS.
+
+### Interactive learning guide
+Click or tap any of the three Learn cards to open detailed explanations, examples and complexity information. The algorithm card follows the selected algorithm. Close with Escape or the close button.
